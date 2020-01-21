@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2020新年快樂</title>
+    <link rel="stylesheet" href="NewYear.css">
+    <link rel="icon" href="NewYearImg/favicon.ico">
+</head>
+
+<body>
+    <div class="firstBorder">
+        <div class="secandBorder">
+            <div class="contaner">
+                <img class="titleBlue" src="NewYearImg/titleBlue.png" alt="庚子鼠年，新年快樂">
+                <div class="infoContanter">
+                    <div class="inputPart">
+                        <img src="NewYearImg/mouseOne.png" alt="輸入密碼">
+                        <input id="inputText" type="text" placeholder="請輸入...(｡･ω･｡)ﾉ">
+                        <button id="inputBtn">確認</button>
+                    </div>
+                    <div class="messengPart">
+                        <img src="NewYearImg/mouseTow.png" alt="卡片內容">
+                        <div class="messengText"></div>
+                    </div>
+                </div>
+                <div class="mouseBottom">
+                    <img src="NewYearImg/MmLeft.png" alt="左邊的老鼠">
+                    <img src="NewYearImg/MmRight.png" alt="右邊的老鼠">
+                </div>
+                <img class="titleYellow" src="NewYearImg/titleYellow.png" alt="2020HappyNewYear">
+                <img class="topPng" src="NewYearImg/top.png">
+                <img class="bottomPng" src="NewYearImg/bottom.png">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="NewYear.js" type="text/javascript"></script>
+<script>
+    console.log(NewYearText[0]['passWord']);
+    $("#inputBtn").click(function() {
+        let inputPass = document.getElementById('inputText').value;
+        for (let i in NewYearText) {
+            if (inputPass == NewYearText[i]['passWord']) {
+                $(".inputPart").hide();
+                $(".messengPart").css("display", "flex");
+                $(".messengText").html(NewYearText[i]['text']);
+            }
+        }
+    });
+</script>
+
+
+</html>
