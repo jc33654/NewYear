@@ -94,6 +94,15 @@ body {
     box-shadow: inset 2px 2px 3px #af1d2b;
 }
 
+@media (max-width:414px) {
+    .inputPart input {
+        bottom: -20%;
+    }
+    #inputBtn {
+        bottom: -35%;
+    }
+}
+
 .messengPart {
     display: none;
     position: relative;
@@ -153,7 +162,7 @@ body {
     display: flex;
     position: absolute;
     font-size: 20px;
-    color: aquamarine;
+    color: #630909;
     width: 80%;
     max-width: 370px;
     flex-direction: column;
@@ -161,10 +170,7 @@ body {
 
 @media (max-width:414px) {
     .messengText {
-        display: flex;
-        position: absolute;
-        font-size: 20px;
-        color: aquamarine;
+        font-size: 18px;
         top: 35vh;
         width: 80%;
         overflow-y: auto;
