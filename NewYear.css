@@ -159,6 +159,7 @@ body {
 }
 
 .messengText {
+    z-index: 3;
     display: flex;
     position: absolute;
     font-size: 20px;
